@@ -9,7 +9,7 @@ let leaveGroupBtn = document.querySelector("#leaveGroupBtn");
 let groupName = document.querySelector("#groupName");
 
 window.addEventListener("DOMContentLoaded", () => {
-  ws = new WebSocket(`ws://localhost:3000/ws`);
+  ws = new WebSocket(`ws://${top.location.url}:3000/ws`);
   ws.addEventListener("open", onConnectionOpen);
   ws.addEventListener("message", onMessageReceived);
 });
